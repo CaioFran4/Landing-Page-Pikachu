@@ -26,7 +26,8 @@ h1{
     font-size: 22vw;
     text-align: center;
     color: white;
-    transform: translateY(30%);
+    transform: translateY(20%);
+    z-index: -1;
 }
 h1::before{
     content: 'Pikachu';
@@ -50,13 +51,13 @@ h1::before{
 .hero-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 0.5rem;
 }
 
 .hero-container h2{
-    font-size: 10.5vw;
+    font-size: 9.94vw;
     text-align: center;
     color: var(--color-secondary);
 }
@@ -67,7 +68,7 @@ h1::before{
 
 .hero-container a{
     width: 100%;
-    height: 100%;
+    height: 100px;
     text-decoration: none;
     background-color: var(--color-secondary);
     color: white;
@@ -78,3 +79,106 @@ h1::before{
     gap: 1rem;
 }
 
+footer{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .hero-container p{
+        display: block;
+        font-size: 1.8rem;
+        text-align: center;
+        color: var(--color-secondary);
+    }
+}
+
+@media (min-width: 1024px){
+    body{
+        padding: 32px 72px;
+
+    }
+    h1{
+        font-size: 20vw;
+        transform: translateY(35%);
+        left: 12.5%;
+        position: absolute;
+        
+
+    }
+
+    .hero-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-container div{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        width: 500px;
+    }
+
+    .hero-container h2{
+        font-size:60px;
+        text-align: left;
+        font-weight: 200;
+        z-index: 1;
+    }
+
+    .hero-container p{
+        text-align: left;
+        font-weight: 100;
+        font-size: 20px;
+        text-align: start;
+        height: 100px;
+        width: 530px;
+        z-index: 1;
+    }
+    .hero-container a{
+        width: 400px;
+    }
+
+    .logo{
+        font-size: 34px;
+    }
+
+    .pikachu{
+        width: auto;
+        height: 65vh;
+        top: 60%;
+        left: 49%;
+    }
+    footer{
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        color: var(--color-secondary);
+        justify-content: end;
+        height:40px;
+    }
+
+    .fotdiv{
+        display: flex;
+        width: 100%;
+        height: 70px;
+        justify-content: center;
+        align-items: end;
+    
+    }
+
+
+    h1::before{
+        content: 'Pikachu';
+        color: #FFF5;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        font-size: 27vw;
+    }
+
+    
+}
+    
